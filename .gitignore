@@ -6,4 +6,7 @@ venv/
 *.db
 *.db-shm
 *.db-wal
-
+build/
+dist/
+installer-output/
+*.spec
