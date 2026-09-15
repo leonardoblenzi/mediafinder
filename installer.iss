@@ -1,5 +1,5 @@
 #define AppName "Pesquisa de Mídias"
-#define AppVersion "1.0.0"
+#define AppVersion "1.0.1"
 #define AppPublisher "FZ Tech"
 #define AppExeName "PesquisaMidias.exe"
 
@@ -13,7 +13,7 @@ DefaultGroupName={#AppName}
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 OutputDir=installer-output
-OutputBaseFilename=Instalar-Pesquisa-de-Midias-1.0.0
+OutputBaseFilename=Instalar-Pesquisa-de-Midias-1.0.1
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -27,10 +27,12 @@ Name: "desktopicon"; Description: "Criar atalho na Área de Trabalho"; GroupDesc
 
 [Files]
 Source: "dist\\PesquisaMidias\\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "installer-assets\\vc_redist.x64.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall
 
 [Icons]
 Name: "{group}\\{#AppName}"; Filename: "{app}\\{#AppExeName}"
 Name: "{autodesktop}\\{#AppName}"; Filename: "{app}\\{#AppExeName}"; Tasks: desktopicon
 
 [Run]
+Filename: "{tmp}\\vc_redist.x64.exe"; Parameters: "/install /quiet /norestart"; StatusMsg: "Instalando componentes do Microsoft Visual C++..."; Flags: waituntilterminated
 Filename: "{app}\\{#AppExeName}"; Description: "Abrir {#AppName}"; Flags: nowait postinstall skipifsilent

@@ -9,4 +9,5 @@ venv/
 build/
 dist/
 installer-output/
+installer-assets/
 *.spec
