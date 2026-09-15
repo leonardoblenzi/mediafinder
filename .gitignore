@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 .idea/
 .venv/
+buildenv/
 venv/
 *.db
 *.db-shm
@@ -11,3 +12,4 @@ dist/
 installer-output/
 installer-assets/
 *.spec
+!PesquisaMidias.spec

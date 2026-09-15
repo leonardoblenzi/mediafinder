@@ -1,5 +1,5 @@
 #define AppName "Pesquisa de Mídias"
-#define AppVersion "1.0.1"
+#define AppVersion "1.0.4"
 #define AppPublisher "FZ Tech"
 #define AppExeName "PesquisaMidias.exe"
 
@@ -13,7 +13,7 @@ DefaultGroupName={#AppName}
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 OutputDir=installer-output
-OutputBaseFilename=Instalar-Pesquisa-de-Midias-1.0.1
+OutputBaseFilename=Instalar-Pesquisa-de-Midias-1.0.4
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
